@@ -1,5 +1,18 @@
-<div *ngFor="let tempDocument of documents">
-    <h3 class="text-uppercase">{{tempDocument.title}}</h3>
-    <p><b>Resumo:</b> {{tempDocument.resume}} </p>
-    <p><b>Ano:</b> {{tempDocument.year}}</p>
+<div class="main-content">
+    <div class="section-content section-content-p30">
+        <div class="container-fluid">
+            <div class="row">
+                <div *ngFor="let tempDocument of documents" class="col-md-3">
+                    <div class="product-box">
+                        <a href="{{tempDocument.pdfUrl}}" target="_blank">
+                            <h3>{{(tempDocument.title).toUpperCase( )}}</h3>
+                        </a>
+                        <p><b>Resumo:</b> {{tempDocument.resume}} </p>
+                        <p><b>Ano:</b> {{tempDocument.year}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
